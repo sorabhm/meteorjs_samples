@@ -6,9 +6,26 @@ This is an initiative towards testing the meteor framework
 {{helperHand}}
 {{/markdown}}
 
+<!-- Some examples of Block helpers -->
+<h2>Block Helpers below</h2>
 <br/>
-<br/>
+Using EACH LOOP BELOW <br/> 
 {{#each postsList}}
 	{{> postInList}}
 {{/each}}
+
+<br/>
+<br/>
+
+{{#if nonDeclaredVar}}
+Using IF-ELSE condition --> I am inside if 
+{{else}}
+Using IF-ELSE condition --> Inside ELSE
+{{/if}}
+
+{{#with exampleHelpers}}
+<br/> Using WITH HANDLEBAR Syntax --> {{{helperHand}}}
+{{/with}}
+
+
 </template>
