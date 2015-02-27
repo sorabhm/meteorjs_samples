@@ -19,19 +19,7 @@ Template.home.helpers({
 	},
 
 	postsList: function() {
-		return [
-	      {
-	        title: 'My Second entry',
-	        description: 'Borem sodum color sit amet, consetetur sadipscing elitr.',
-	        author: 'Fabian Vogelsteller',
-	        timeCreated: moment.unix(moment().subtract(3, 'days').unix()).fromNow()
-	      },
-	      {
-	        title: 'My First entry',
-	        description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-	        author: 'Fabian Vogelsteller',
-	        timeCreated: moment.unix(moment().subtract(7, 'days').unix()).fromNow()
-	      }
-	    ];
+		//return Posts.find({}, {sort: { timecreated: -1 }})
+		return Posts.find().fetch()
 	}
 })
