@@ -23,3 +23,10 @@ Template.home.helpers({
 		return Posts.find().fetch()
 	}
 })
+
+Template.home.events({
+	"mouseover button.lazyload": function(e, template) {
+		var currentVal = Session.get("lazyLoadLimit");
+		Session.set("lazyLoadLimit", currentVal + 2);
+	}
+})
