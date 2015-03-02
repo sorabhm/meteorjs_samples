@@ -4,7 +4,7 @@
       <h1>My Meteor Single Page App</h1>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/home">Home</a>
         </li>
         <li>
           <a href="/about">About</a>
@@ -15,8 +15,14 @@
 
   <div class="container">
     <main>
-    {{> home}}
-    {{> about}}
+    {{> yield}}
     </main>
+  </div>
+</template>
+
+<template name="pageNotFound">
+  <div class="center">
+    <h1>Nothing here</h1><br>
+    <h2>You hit a page which doesn't exist!</h2>
   </div>
 </template>
