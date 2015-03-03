@@ -14,3 +14,7 @@ Meteor.publish("lazy-loading-posts", function(limit){
 		fields: { text: 0 }
 	});
 });
+
+Meteor.publish("single-post", function(slug) {
+	return Posts.find({slug: slug});
+});
